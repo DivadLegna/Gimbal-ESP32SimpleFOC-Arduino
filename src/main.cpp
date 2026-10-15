@@ -77,7 +77,9 @@ void setup() {
 }
 
 void loop() {
- 
+  sensor.update();
+  Serial.println(sensor.getAngle());
+  
   motor.move(target_velocity);
   motor1.move(target_velocity);
 
